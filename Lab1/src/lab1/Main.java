@@ -12,7 +12,7 @@ public class Main {
 		int i;
 		for (i = 0; i < disArr.length; i++)
 			if (disArr[i].equals("small") || disArr[i].equals("medium")
-					|| disArr[i].equals("large"))
+					|| disArr[i].equals("large") || disArr[i].equals("grand"))
 				break;
 
 		if (i >= disArr.length) {
@@ -99,8 +99,19 @@ public class Main {
 			((BeverageWithIngredient) order).getDescription();
 		} else if (order instanceof Espresso) {
 			((Espresso) order).getDescription();
-		}
+		} else if (order instanceof HouseBlend){
+            ((HouseBlend) order).getDescription();
+        } else if (order instanceof Decaf){
+            ((Decaf) order).getDescription();
+        } else if (order instanceof RedTea){
+            ((RedTea) order).getDescription();
+        } else if (order instanceof GreenTea){
+            ((GreenTea) order).getDiscription();
+        } else {
+            ((WhiteTea) order).getDescription();
+        }
 		// and so on...
+
 
 		DecimalFormat df = new DecimalFormat(".0");
 		System.out.println("The total cost of your order is: "
