@@ -29,11 +29,11 @@ public class Main {
 
 		Beverage order;
 		if (beveStr.equals("espresso")) {
-			order = new CoffeeBeverage();
+			//order = new CoffeeBeverage();
 			order = new Espresso();
 			((CoffeeBeverage) order).setSize(disArr[i]);
 		} else if (beveStr.equals("houseblend")) {
-			order = new CoffeeBeverage();
+			//order = new CoffeeBeverage();
 			order = new HouseBlend();
 			((CoffeeBeverage) order).setSize(disArr[i]);
 		} else if (beveStr.equals("mocha")) {
@@ -69,11 +69,22 @@ public class Main {
 			order = new RedTea();
 			((TeaBeverage) order).setSize(disArr[i]);
 			order = new Milk(order);
+		} else if(beveStr.equals("decaf mocha")) {
+			order = new Decaf();
+			((CoffeeBeverage) order).setSize(disArr[i]);
+			order = new Chocolate(order);
+		} else if(beveStr.equals("decaf latte")) {
+			order = new Decaf();
+			((CoffeeBeverage) order).setSize(disArr[i]);
+			order = new Milk(order);
+		} else if(beveStr.equals("decaf cappuccino")) {
+			order = new Decaf();
+			((CoffeeBeverage) order).setSize(disArr[i]);
+			order = new WhipCream(order);
 		} else {
 			System.out.println("Illegal input: " + beveStr);
 			return;
 		}
-
 		for (i++; i < disArr.length; i++) {
 			if (disArr[i].equals("chocolate")) {
 				order = new Chocolate(order);
