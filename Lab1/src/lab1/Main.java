@@ -73,7 +73,10 @@ public class Main {
 			order = new Decaf();
 			((CoffeeBeverage) order).setSize(disArr[i]);
 			order = new Chocolate(order);
-		} else if(beveStr.equals("decaf latte")) {
+		} else if(beveStr.equals("decaf")) {
+			order = new Decaf();
+			((CoffeeBeverage) order).setSize(disArr[i]);
+		}else if(beveStr.equals("decaf latte")) {
 			order = new Decaf();
 			((CoffeeBeverage) order).setSize(disArr[i]);
 			order = new Milk(order);
