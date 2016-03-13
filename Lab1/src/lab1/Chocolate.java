@@ -10,3 +10,4 @@ public class Chocolate extends BeverageWithIngredient {
 		return 0.3 + super.cost();
 	}
 }
+

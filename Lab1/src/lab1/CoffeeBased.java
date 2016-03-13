@@ -8,8 +8,13 @@ public class CoffeeBased implements SizeFactor {
 			return 0.4;
 		} else if (size.toLowerCase().equals("medium")) {
 			return 0.7;
-		} else {
+		} else if (size.toLowerCase().equals("large")) {
 			return 1.0;
+		} else if (size.toLowerCase().equals("grand")){
+			return 1.3;
+		} else{
+			//something has to be wrong if it goes there
+			return 0;
 		}
 	}
 

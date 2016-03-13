@@ -12,7 +12,7 @@ public class Main {
 		int i;
 		for (i = 0; i < disArr.length; i++)
 			if (disArr[i].equals("small") || disArr[i].equals("medium")
-					|| disArr[i].equals("large"))
+					|| disArr[i].equals("large") || disArr[i].equals("grand"))
 				break;
 
 		if (i >= disArr.length) {
@@ -29,11 +29,11 @@ public class Main {
 
 		Beverage order;
 		if (beveStr.equals("espresso")) {
-			order = new CoffeeBeverage();
+			//order = new CoffeeBeverage();
 			order = new Espresso();
 			((CoffeeBeverage) order).setSize(disArr[i]);
 		} else if (beveStr.equals("houseblend")) {
-			order = new CoffeeBeverage();
+			//order = new CoffeeBeverage();
 			order = new HouseBlend();
 			((CoffeeBeverage) order).setSize(disArr[i]);
 		} else if (beveStr.equals("mocha")) {
@@ -69,11 +69,25 @@ public class Main {
 			order = new RedTea();
 			((TeaBeverage) order).setSize(disArr[i]);
 			order = new Milk(order);
+		} else if(beveStr.equals("decaf mocha")) {
+			order = new Decaf();
+			((CoffeeBeverage) order).setSize(disArr[i]);
+			order = new Chocolate(order);
+		} else if(beveStr.equals("decaf")) {
+			order = new Decaf();
+			((CoffeeBeverage) order).setSize(disArr[i]);
+		}else if(beveStr.equals("decaf latte")) {
+			order = new Decaf();
+			((CoffeeBeverage) order).setSize(disArr[i]);
+			order = new Milk(order);
+		} else if(beveStr.equals("decaf cappuccino")) {
+			order = new Decaf();
+			((CoffeeBeverage) order).setSize(disArr[i]);
+			order = new WhipCream(order);
 		} else {
 			System.out.println("Illegal input: " + beveStr);
 			return;
 		}
-
 		for (i++; i < disArr.length; i++) {
 			if (disArr[i].equals("chocolate")) {
 				order = new Chocolate(order);
@@ -99,8 +113,19 @@ public class Main {
 			((BeverageWithIngredient) order).getDescription();
 		} else if (order instanceof Espresso) {
 			((Espresso) order).getDescription();
-		}
+		} else if (order instanceof HouseBlend){
+            ((HouseBlend) order).getDescription();
+        } else if (order instanceof Decaf){
+            ((Decaf) order).getDescription();
+        } else if (order instanceof RedTea){
+            ((RedTea) order).getDescription();
+        } else if (order instanceof GreenTea){
+            ((GreenTea) order).getDiscription();
+        } else {
+            ((WhiteTea) order).getDescription();
+        }
 		// and so on...
+
 
 		DecimalFormat df = new DecimalFormat(".0");
 		System.out.println("The total cost of your order is: "
