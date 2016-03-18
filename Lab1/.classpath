@@ -2,7 +2,25 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="test"/>
-	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="lib" path="C:/Java/jdk1.8.0_05/lib/ant-javafx.jar"/>
+	<classpathentry kind="lib" path="C:/Java/jdk1.8.0_05/lib/dt.jar"/>
+	<classpathentry kind="lib" path="C:/Java/jdk1.8.0_05/lib/javafx-mx.jar"/>
+	<classpathentry kind="lib" path="C:/Java/jdk1.8.0_05/lib/jconsole.jar"/>
+	<classpathentry kind="lib" path="C:/Java/jdk1.8.0_05/lib/sa-jdi.jar"/>
+	<classpathentry kind="lib" path="C:/Java/jdk1.8.0_05/lib/tools.jar"/>
+	<classpathentry kind="lib" path="C:/Java/jdk1.8.0_05/lib/missioncontrol/mc.jar"/>
+	<classpathentry kind="lib" path="C:/Java/jdk1.8.0_05/jre/lib/charsets.jar"/>
+	<classpathentry kind="lib" path="C:/Java/jdk1.8.0_05/jre/lib/deploy.jar"/>
+	<classpathentry kind="lib" path="C:/Java/jdk1.8.0_05/jre/lib/javaws.jar"/>
+	<classpathentry kind="lib" path="C:/Java/jdk1.8.0_05/jre/lib/jce.jar"/>
+	<classpathentry kind="lib" path="C:/Java/jdk1.8.0_05/jre/lib/jfr.jar"/>
+	<classpathentry kind="lib" path="C:/Java/jdk1.8.0_05/jre/lib/jfxswt.jar"/>
+	<classpathentry kind="lib" path="C:/Java/jdk1.8.0_05/jre/lib/jsse.jar"/>
+	<classpathentry kind="lib" path="C:/Java/jdk1.8.0_05/jre/lib/management-agent.jar"/>
+	<classpathentry kind="lib" path="C:/Java/jdk1.8.0_05/jre/lib/plugin.jar"/>
+	<classpathentry kind="lib" path="C:/Java/jdk1.8.0_05/jre/lib/resources.jar"/>
+	<classpathentry kind="lib" path="C:/Java/jdk1.8.0_05/jre/lib/rt.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
