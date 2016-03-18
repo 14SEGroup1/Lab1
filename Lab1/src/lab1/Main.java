@@ -2,9 +2,9 @@ package lab1;
 import java.text.DecimalFormat;
 public class Main {
 	//private static Beverage order;
-	private static String[] disArr; 
+	//private static String[] disArr; 
 	public static void main(String[] args) {
-		disArr= new String[args.length]; 
+		String[] disArr= new String[args.length]; 
 		for (int j = 0; j < args.length; j++) { 
 			disArr[j] = args[j].toLowerCase(); 
 		} 
@@ -36,7 +36,7 @@ public class Main {
 		
 		OrderMachine ordermachine = new OrderMachine(disArr);
 		Beverage order = ordermachine.getBeverage(beveStr,i);//Create an beverage instance based on the input of the user including it's size 
-		ordermachine.addIngredient(order,i);//add ingredient to the beverage if urged	
+		order = ordermachine.addIngredient(order,i);//add ingredient to the beverage if urged	
 		DecimalFormat df = new DecimalFormat(".0");
 		System.out.println("The total cost of your order is: "+ df.format(order.cost()));
 		ordermachine.getDescription(order);

@@ -87,7 +87,7 @@ public class OrderMachine {
 		return order;
 	}
 	
-	public void addIngredient(Beverage order,int i){
+	public Beverage addIngredient(Beverage order,int i){
 		for (i++; i < orderMessage.length; i++) {
 			switch( orderMessage[i] ){
 
@@ -117,6 +117,7 @@ public class OrderMachine {
 				System.exit(0);
 			}
 		}
+		return order;
 	}
 	
 	public void getDescription(Beverage order){
