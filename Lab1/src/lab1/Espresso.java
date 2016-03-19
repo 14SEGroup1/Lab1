@@ -3,7 +3,7 @@ package lab1;
 public class Espresso extends CoffeeBeverage {
 	private String description;
 	public Espresso() {
-		description = "Esspresso";
+		description = "Espresso";
 	}
 	public String getDescription() {
 		return description;

@@ -141,7 +141,7 @@ public class OrderMachine {
 			((RedTea) order).getDescription();
 		} 
 		else if (order instanceof GreenTea){
-			((GreenTea) order).getDiscription();
+			((GreenTea) order).getDescription();
 		} 
 		else {
 			((WhiteTea) order).getDescription();

@@ -33,7 +33,7 @@ public class Main {
 		} else {
 			beveStr = disArr[0];
 		}
-		
+		//I added a new class named OrderMachine to take over some of main function's work and make it easier for debugging
 		OrderMachine ordermachine = new OrderMachine(disArr);
 		Beverage order = ordermachine.getBeverage(beveStr,i);//Create an beverage instance based on the input of the user including it's size 
 		order = ordermachine.addIngredient(order,i);//add ingredient to the beverage if urged	
