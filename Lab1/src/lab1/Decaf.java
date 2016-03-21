@@ -3,9 +3,8 @@ package lab1;
  * Created by handsome on 16/3/12.
  */
 public class Decaf extends CoffeeBeverage{
-	private String description;
 	public Decaf() { 
-		description = "Decaf"; 
+		super.setDescription("Decaf"); 
 	}
 	public String getDescription() {
 		return description;
