@@ -2,17 +2,13 @@ package lab1;
 
 public class BeverageWithIngredient extends Beverage {
 	private Beverage drink;
-	protected String description;
-
 	public BeverageWithIngredient(Beverage drink) {
+		super();
 		this.drink = drink;
+		super.setDescription(drink.getDescription());
 	}
-	
-	public String getDescription(){
-		return description;
-	}
-	
 	public double cost() {
 		return drink.cost();
 	}
+	
 }

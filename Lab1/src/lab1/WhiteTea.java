@@ -1,8 +1,6 @@
 package lab1;
 
 public class WhiteTea extends TeaBeverage {
-	private String description;
-
 	public WhiteTea() {
 		description = "White Tea";
 	}

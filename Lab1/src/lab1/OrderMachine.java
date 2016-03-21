@@ -1,13 +1,13 @@
 package lab1;
 
 public class OrderMachine {
-	
+
 	private String[] orderMessage;
-	
+
 	public OrderMachine(String[] inputMessage){
 		orderMessage = inputMessage;
 	}
-	
+
 	public Beverage getBeverage(String beveStr,int beveSize){
 		Beverage order = new Beverage();
 		switch (beveStr) {
@@ -86,9 +86,10 @@ public class OrderMachine {
 		}
 		return order;
 	}
-	
+
 	public Beverage addIngredient(Beverage order,int i){
 		for (i++; i < orderMessage.length; i++) {
+			order.addDescription(" "+orderMessage[i]);
 			switch( orderMessage[i] ){
 
 			case "chocolate" :
@@ -108,7 +109,6 @@ public class OrderMachine {
 				break;
 
 			case "whip" :
-				i++;
 				order = new WhipCream(order);
 				break;
 
@@ -119,33 +119,9 @@ public class OrderMachine {
 		}
 		return order;
 	}
-	
-	public void getDescription(Beverage order){
-		/**
-		 * How do I get the description of each order instead of doing this
-		 * stupid thing forever (except for printing the args)?
-		 */
-		if (order instanceof BeverageWithIngredient){
-			((BeverageWithIngredient) order).getDescription();
-		} 
-		else if (order instanceof Espresso) {
-			((Espresso) order).getDescription();
-		} 
-		else if (order instanceof HouseBlend){
-			((HouseBlend) order).getDescription();
-		} 
-		else if (order instanceof Decaf){
-			((Decaf) order).getDescription();
-		} 
-		else if (order instanceof RedTea){
-			((RedTea) order).getDescription();
-		} 
-		else if (order instanceof GreenTea){
-			((GreenTea) order).getDescription();
-		} 
-		else {
-			((WhiteTea) order).getDescription();
-		}
+
+	public String getDescription(Beverage order){
+		return order.getDescription();
 	}
 }
 

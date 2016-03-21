@@ -1,10 +1,9 @@
 package lab1;
 
 public class HouseBlend extends CoffeeBeverage {
-	private String description;
-	
+	protected Beverage drink;
 	public HouseBlend() {
-		description = "HouseBlend";
+		super.setDescription("HouseBlend");
 	}
 	
 	public String getDescription() {
