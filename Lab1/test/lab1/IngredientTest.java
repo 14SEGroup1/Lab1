@@ -20,52 +20,62 @@ public class IngredientTest {
 
 	@Test
 	public void testChocolate() {
+		espresso.addDescription(" chocolate");
+		greentea.addDescription(" chocolate");
 		espresso = new Chocolate(espresso);
 		greentea = new Chocolate(greentea);
 		assertEquals(2.0,espresso.cost(),0.0001);
-		assertEquals(null+" chocolate",((BeverageWithIngredient)espresso).getDescription());
+		assertEquals("Espresso chocolate",(espresso).getDescription());
 		assertEquals(1.8,greentea.cost(),0.0001);
-		assertEquals(null+" chocolate",((BeverageWithIngredient)greentea).getDescription());
+		assertEquals("Green Tea chocolate",(greentea).getDescription());
 	}
 	
 	@Test
 	public void testGinger() {
+		espresso.addDescription(" ginger");
+		greentea.addDescription(" ginger");
 		espresso = new Ginger(espresso);
 		greentea = new Ginger(greentea);
 		assertEquals(2.3,espresso.cost(),0.0001);
-		assertEquals(null+" ginger",((BeverageWithIngredient)espresso).getDescription());
+		assertEquals("Espresso ginger",(espresso).getDescription());
 		assertEquals(2.1,greentea.cost(),0.0001);
-		assertEquals(null+" ginger",((BeverageWithIngredient)greentea).getDescription());
+		assertEquals("Green Tea ginger",(greentea).getDescription());
 	}
 	
 	@Test
 	public void testJasmine() {
+		espresso.addDescription(" jasmine");
+		greentea.addDescription(" jasmine");
 		espresso = new Jasmine(espresso);
 		greentea = new Jasmine(greentea);
 		assertEquals(2.2,espresso.cost(),0.0001);
-		assertEquals(null+" jasmine",((BeverageWithIngredient)espresso).getDescription());
+		assertEquals("Espresso jasmine",(espresso).getDescription());
 		assertEquals(2.0,greentea.cost(),0.0001);
-		assertEquals(null+" jasmine",((BeverageWithIngredient)greentea).getDescription());
+		assertEquals("Green Tea jasmine",(greentea).getDescription());
 	}
 	
 	@Test
 	public void testMilk() {
+		espresso.addDescription(" milk");
+		greentea.addDescription(" milk");
 		espresso = new Milk(espresso);
 		greentea = new Milk(greentea);
 		assertEquals(2.0,espresso.cost(),0.0001);
-		assertEquals(null+" milk",((BeverageWithIngredient)espresso).getDescription());
+		assertEquals("Espresso milk",(espresso).getDescription());
 		assertEquals(1.8,greentea.cost(),0.0001);
-		assertEquals(null+" milk",((BeverageWithIngredient)greentea).getDescription());
+		assertEquals("Green Tea milk",(greentea).getDescription());
 	}
 	
 	@Test
 	public void testWhipCream() {
+		espresso.addDescription(" whip");
+		greentea.addDescription(" whip");
 		espresso = new WhipCream(espresso);
 		greentea = new WhipCream(greentea);
 		assertEquals(2.0,espresso.cost(),0.0001);
-		assertEquals(null+" whip",((BeverageWithIngredient)espresso).getDescription());
+		assertEquals("Espresso whip",(espresso).getDescription());
 		assertEquals(1.8,greentea.cost(),0.0001);
-		assertEquals(null+" whip",((BeverageWithIngredient)greentea).getDescription());
+		assertEquals("Green Tea whip",(greentea).getDescription());
 	}
 	
 

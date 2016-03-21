@@ -1,8 +1,6 @@
 package lab1;
 import java.text.DecimalFormat;
 public class Main {
-	//private static Beverage order;
-	//private static String[] disArr; 
 	public static void main(String[] args) {
 		String[] disArr= new String[args.length]; 
 		for (int j = 0; j < args.length; j++) { 
@@ -24,6 +22,7 @@ public class Main {
 			}
 		}
 		if (i >= disArr.length) {
+			
 			System.out.println("Must set a size!");
 			return;
 		}
@@ -39,6 +38,6 @@ public class Main {
 		order = ordermachine.addIngredient(order,i);//add ingredient to the beverage if urged	
 		DecimalFormat df = new DecimalFormat(".0");
 		System.out.println("The total cost of your order is: "+ df.format(order.cost()));
-		ordermachine.getDescription(order);
+		//System.out.println(ordermachine.getDescription(order));
 		}
   }

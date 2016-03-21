@@ -1,12 +1,11 @@
 package lab1;
 
 public class Espresso extends CoffeeBeverage {
-	private String description;
 	public Espresso() {
-		description = "Espresso";
+		super.setDescription("Espresso");
 	}
 	public String getDescription() {
-		return description;
+		return super.getDiscription();
 	}
 	public double cost() {
 		return super.cost() + 1.0;
